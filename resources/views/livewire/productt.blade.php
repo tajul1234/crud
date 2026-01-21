@@ -1,14 +1,29 @@
+<div>
+@if($createaData)
+@include("livewire.productCreate")
+@endif
+
+@if($updateProduct)
+
+    @include('livewire.editProuct')
+
+    @endif
+@if(session('success'))
+<p class="text-green-500">{{session('success')}}</p>
+@endif
 
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+<button class="p-4 bg-green-500 text-white rounded-xl" wire:click="addCretae()">Create</button>
+<div class="relative overflow-x-auto bg-neutral-primary-soft mt-5 shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
-                <th scope="col" class="px-6 py-3 font-medium">
-                    Product name
+                <th scope="col" class="px-6 py-3 font-medi
+                um">
+                    Product Title
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
-                    Color
+                    Body
                 </th>
 
                 <th scope="col" class="px-6 py-3 font-medium">
@@ -31,7 +46,7 @@
                 </td>
 
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
+                    <button  class="font-medium text-fg-brand hover:underline" wire:click="editData({{ $product->id }})">Edit</button>
                 </td>
             </tr>
 
@@ -46,4 +61,5 @@
 
         </tbody>
     </table>
+</div>
 </div>

@@ -10,6 +10,7 @@
 
     @endif
 
+    
      @if($editdatau)
 
     @include('livewire.edit')
