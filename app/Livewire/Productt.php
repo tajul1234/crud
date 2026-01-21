@@ -65,7 +65,7 @@ public $products,$updateProduct=false;
             'title'=>'required',
             'body'=>'required'
         ]);
-        $post::update([
+        $post->update([
             'title'=>$this->title,
             'body'=>$this->body
         ]);
