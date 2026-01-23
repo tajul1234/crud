@@ -1,8 +1,3 @@
-<div>
-
-
-
-<!-- Main modal -->
 <div id="crud-modal" tabindex="-1" aria-hidden="true" class=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
@@ -18,7 +13,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form wire:submit="insertData()">
+            <form wire:submit="updateData()">
                 <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
                     <div class="col-span-2">
                         <label for="title" class="block mb-2.5 text-sm font-medium text-heading">Title</label>
@@ -42,7 +37,7 @@
 
                 </div>
                 <div class="flex items-center space-x-4 border-t border-default pt-4 md:pt-6">
-                   <button class="bg-green-500 p-2 rounded-lg">Submit</button>
+                   <button class="bg-green-500 p-2 rounded-lg">Update</button>
                     <button data-modal-hide="crud-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" wire:click="cancel">Cancel</button>
                 </div>
             </form>
@@ -54,4 +49,13 @@
 
 
 
-</div>
+
+
+
+
+
+
+
+
+
+
